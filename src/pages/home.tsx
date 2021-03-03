@@ -1,10 +1,10 @@
 import React from 'react';
 import { Header } from '../components/Header/header';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
     return(
         <>
-            <Header />
+            <Header/>
         </>
     )
 };

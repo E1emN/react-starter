@@ -8,11 +8,11 @@ module.exports = {
     filename: "[name].js",
     sourceMapFilename: "[name].js.map"
   },
-  devtool: "source-map",
+  devtool: "inline-source-map",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 3000,
+    port: 4000,
     watchContentBase: true,
     progress: true
   },
@@ -20,11 +20,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.(js|jsx|tsx|ts)$/,
+        loader: "ts-loader",
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader"
-        }
       },
       {
         test: /\.css$/,
@@ -53,6 +51,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
 };
