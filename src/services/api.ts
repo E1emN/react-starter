@@ -1,8 +1,8 @@
 const apiUrl = 'https://jsonplaceholder.typicode.com/';
 
-const checkStatus = (response) => {
+const checkStatus = (response: any) => {
     if (response.ok) {
-        return response.text().then(function(text) {
+        return response.text().then(function(text: any) {
           return text ? JSON.parse(text) : {}
         })
     } else if (response.status === 404) {
@@ -17,7 +17,7 @@ const headers = {
     'Content-Type': 'application/json'
 }
 
-const setSettings = (method, body) => {
+const setSettings = (method: string, body?: object) => {
     const settings = {
         method,
         headers,
@@ -27,7 +27,7 @@ const setSettings = (method, body) => {
 }
 
 export const api = {
-    GET: (query) => {
+    GET: (query: string) => {
         return fetch(apiUrl + query, setSettings('GET')).then(checkStatus)
     }
 };
