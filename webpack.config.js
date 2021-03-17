@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: "[name].js",
-    sourceMapFilename: "[name].js.map"
+    sourceMapFilename: "[file].map[query]"
   },
   devtool: "source-map",
   devServer: {
@@ -14,7 +14,7 @@ module.exports = {
     compress: true,
     port: 3000,
     watchContentBase: true,
-    progress: true
+    hot: true
   },
 
   module: {
