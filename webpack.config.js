@@ -6,15 +6,15 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: "[name].js",
-    sourceMapFilename: "[name].js.map"
+    sourceMapFilename: "[file].map[query]"
   },
   devtool: "inline-source-map",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 4000,
+    port: 3000,
     watchContentBase: true,
-    progress: true
+    hot: true
   },
 
   module: {
