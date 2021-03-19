@@ -2,6 +2,6 @@
 
 React, Webpack, Babel, Sass.
 
-Also you can use TypeScript, just change to 'ts' branch.
+Also you can code with TypeScript, just change to 'ts' branch.
 
 After cloning, don't forget remove .git file
