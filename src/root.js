@@ -8,7 +8,7 @@ export const AppRouter = () => {
         <Suspense fallback={<div>loading...</div>}>
             <BrowserRouter>
                 <Switch>
-                    <Route path="/" component={HomePage} />
+                    <Route path="/" exact component={HomePage} />
                 </Switch>
             </BrowserRouter>
         </Suspense>
