@@ -1,4 +1,4 @@
-cd components
+cd src/components
 mkdir $1
 cd $1
 touch $2.js $2.scss
